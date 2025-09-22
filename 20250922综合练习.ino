@@ -1,8 +1,3 @@
-/*
- Name:		freedanzhu.ino
- Created:	2025/9/19 20:18:56
- Author:	yjh12
-*/
 #include "Arduino_LED_Matrix.h"
 ArduinoLEDMatrix matrix;
 uint8_t i = 0, j = 0;
@@ -16,7 +11,7 @@ uint8_t newGrid[8][12] = {
  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 };
-uint8_t direction; //·½Ïò±äÁ¿
+uint8_t direction; //æ–¹å‘å˜é‡
 
 uint8_t directionchange() {
 	if (i == 0 && j == 0) direction = 4;
@@ -47,7 +42,7 @@ void setup() {
 	matrix.begin();
 	newGrid[0][0] = 1;
 	direction = 4;
-	//·½ÏòËµÃ÷£º1Îª×óÉÏ£¬2ÎªÓÒÉÏ£¬3Îª×óÏÂ£¬4ÎªÓÒÏÂ
+	//æ–¹å‘è¯´æ˜ï¼š1ä¸ºå·¦ä¸Šï¼Œ2ä¸ºå³ä¸Šï¼Œ3ä¸ºå·¦ä¸‹ï¼Œ4ä¸ºå³ä¸‹
 }
 
 // the loop function runs over and over again until power down or reset
